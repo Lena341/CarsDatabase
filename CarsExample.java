@@ -48,9 +48,9 @@ public class CarsExample {
 			
 			//Update
 			sql="UPDATE Newcars SET model=?,brand=?,price=? WHERE model=?";
-			stm.setString(1, "hello");
-			stm.setString(2, "world");
-			stm.setInt(3, 35000);
+			stm.setString(1, "Opel");
+			stm.setString(2, "Corsa");
+			stm.setInt(3, 14550);
 			int rowsUpdated=stm.executeUpdate();
 			if(rowsUpdated>0)
 				System.out.println("Updated");
