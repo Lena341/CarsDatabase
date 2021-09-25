@@ -17,7 +17,7 @@ public class CarsExample {
 		Connection con=null;
 		try
 		{
-			String url="jdbc:sqlserver://LAPTOP-B566P0U1:1433;databaseName=Cars;integratedSecurity=true; ";
+			String url="jdbc:sqlserver://localhost:1433;databaseName=Cars;integratedSecurity=true; ";
 			con=DriverManager.getConnection(url);
 			if(con!=null)
 				System.out.println("Connected");
