@@ -22,7 +22,7 @@ public class CarsExample {
 			if(con!=null)
 				System.out.println("Connected");
 			
-			//Insert
+			
 			String sql="INSERT INTO Newcars (model,brand,price) VALUES (?,?,?) ";
 			PreparedStatement stm=con.prepareStatement(sql);
 			stm.setNString(1,"abc");
@@ -32,7 +32,7 @@ public class CarsExample {
 			if(rowsInserted>0)
 				System.out.println("Data were inserted successfully");
 			
-			//Select
+			
 			sql="SELECT * FROM Newcars ";
 			Statement stmt=con.createStatement();
 			ResultSet result=stmt.executeQuery(sql);
@@ -46,7 +46,7 @@ public class CarsExample {
 			    System.out.println(String.format(output, ++count, model,brand,price));
 			}
 			
-			//Update
+			
 			sql="UPDATE Newcars SET model=?,brand=?,price=? WHERE model=?";
 			stm.setString(1, "Opel");
 			stm.setString(2, "Corsa");
@@ -55,7 +55,7 @@ public class CarsExample {
 			if(rowsUpdated>0)
 				System.out.println("Updated");
 			
-			//Delete
+			
 			sql="DELETE FROM Newcars WHERE model=?";
 			stm=con.prepareStatement(sql);
 			stm.setString(1,"abc");
